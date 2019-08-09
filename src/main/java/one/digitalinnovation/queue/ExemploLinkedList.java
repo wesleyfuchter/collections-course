@@ -10,42 +10,51 @@ public class ExemploLinkedList {
 
         Queue<String> filaBanco = new LinkedList<>();
 
-        //Adiciona 4 elementos na fila
-        filaBanco.add("Pedro");
-        filaBanco.add("Edson");
-        filaBanco.add("João");
-        filaBanco.add("Jonas");
+        filaBanco.add("Pamela");
+        filaBanco.add("Patrícia");
+        filaBanco.add("Roberto");
+        filaBanco.add("Flávio");
+        filaBanco.add("Anderson");
 
         System.out.println(filaBanco);
 
-        //Retorna o primeira da lista, mas não remove
-        String primeiroNaFila = filaBanco.peek();
+        String clienteASerAtendido = filaBanco.poll();
 
-        System.out.println(primeiroNaFila);
-
-        System.out.println(filaBanco);
-
-        //Retorna o primeira da lista, removendo
-        String primeiroNaFilaRemovido = filaBanco.poll();
-
-        System.out.println(primeiroNaFilaRemovido);
+        System.out.println(clienteASerAtendido);
 
         System.out.println(filaBanco);
 
-        //Retorna o tamanho do fila
+//        filaBanco.clear();
+
+        String primeiroCliente = filaBanco.peek();
+
+        System.out.println(primeiroCliente);
+
+        System.out.println(filaBanco);
+
+        String primeiroClienteOuErro = filaBanco.element();
+
+        System.out.println(primeiroClienteOuErro);
+
+        System.out.println(filaBanco);
+
+        for (String client: filaBanco) {
+            System.out.println(client);
+        }
+
+        Iterator<String> iteratorFilaBanco = filaBanco.iterator();
+
+        while (iteratorFilaBanco.hasNext()) {
+            System.out.println("--->" + iteratorFilaBanco.next());
+        }
+
         System.out.println(filaBanco.size());
 
-        //Navega em todos os itens da fila
-        for (String proximoNaFila: filaBanco) {
-            System.out.println(proximoNaFila);
-        }
+        System.out.println(filaBanco.isEmpty());
 
-        //Navega em todos os itens da fila usando iterator
-        Iterator<String> iterator = filaBanco.iterator();
+        filaBanco.add("Wesley");
 
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
+        System.out.println(filaBanco);
 
     }
 
