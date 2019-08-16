@@ -2,13 +2,12 @@ package one.digitalinnovation.set;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import java.util.Set;
 
 public class ExemploLinkedHashSet {
 
     public static void main(String[] args) {
 
-        Set<Integer> sequenciaNumerica = new LinkedHashSet<>();
+        LinkedHashSet<Integer> sequenciaNumerica = new LinkedHashSet<>();
 
         // Adiciona os numeros no set
         sequenciaNumerica.add(1);
