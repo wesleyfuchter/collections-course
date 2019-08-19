@@ -15,6 +15,9 @@ public class ExemploTreeSet {
         treeCapitais.add("Curitiba");
         treeCapitais.add("São Paulo");
         treeCapitais.add("Rio de Janeiro");
+        treeCapitais.add("Belo Horizonte");
+
+        System.out.println(treeCapitais);
 
         // Retorna a primeira capital no topo da árvore
         System.out.println(treeCapitais.first());

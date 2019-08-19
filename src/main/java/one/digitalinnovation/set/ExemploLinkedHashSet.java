@@ -10,11 +10,11 @@ public class ExemploLinkedHashSet {
         LinkedHashSet<Integer> sequenciaNumerica = new LinkedHashSet<>();
 
         // Adiciona os numeros no set
-        sequenciaNumerica.add(1);
-        sequenciaNumerica.add(2);
-        sequenciaNumerica.add(4);
-        sequenciaNumerica.add(8);
         sequenciaNumerica.add(16);
+        sequenciaNumerica.add(2);
+        sequenciaNumerica.add(8);
+        sequenciaNumerica.add(4);
+        sequenciaNumerica.add(1);
 
         System.out.println(sequenciaNumerica);
 
@@ -36,6 +36,8 @@ public class ExemploLinkedHashSet {
         for (Integer numero: sequenciaNumerica) {
             System.out.println(numero);
         }
+
+        sequenciaNumerica.clear();
 
         // Retorna se o set está vazio ou não
         System.out.println(sequenciaNumerica.isEmpty());
