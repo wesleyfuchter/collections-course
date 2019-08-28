@@ -21,6 +21,12 @@ public class ExemploHashMap {
 
         System.out.println(campeoesMundialFifa);
 
+        // Atualiza o valor para a chave Brasil
+
+        campeoesMundialFifa.put("Brasil", 6);
+
+        System.out.println(campeoesMundialFifa);
+
         // Retorna a Argentina
         System.out.println(campeoesMundialFifa.get("Argentina"));
 
@@ -52,6 +58,19 @@ public class ExemploHashMap {
         }
 
         System.out.println(campeoesMundialFifa);
+
+        // Verifica se o mapa contem a chave Estados Unidos
+        System.out.println(campeoesMundialFifa.containsKey("Estados Unidos"));
+
+        // Verifica se o mapa contem o valor 5
+        System.out.println(campeoesMundialFifa.containsValue(5));
+
+        // Verifica o tamanho antes e depois de limpar o mapa
+        System.out.println(campeoesMundialFifa.size());
+
+        campeoesMundialFifa.clear();
+
+        System.out.println(campeoesMundialFifa.size());
 
     }
 
