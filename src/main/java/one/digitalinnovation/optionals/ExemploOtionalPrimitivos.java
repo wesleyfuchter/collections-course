@@ -12,7 +12,7 @@ public class ExemploOtionalPrimitivos {
         OptionalInt.of(12).ifPresent(System.out::println);
 
         System.out.println("***Valor decimal opcional***");
-        OptionalDouble.of(55.2).ifPresent(System.out::println);
+        OptionalDouble.of(55.0).ifPresent(System.out::println);
 
         System.out.println("***Valor longo opcional***");
         OptionalLong.of(23L).ifPresent(System.out::println);

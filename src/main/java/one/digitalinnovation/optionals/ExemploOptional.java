@@ -6,9 +6,10 @@ public class ExemploOptional {
 
     public static void main(String[] args) {
 
-        Optional<String> optionalString = Optional.of("Valor opcional");
+        Optional<String> optionalString = Optional.empty();
 
         System.out.println(optionalString.isPresent());
+        System.out.println(optionalString.isEmpty());
 
         optionalString.ifPresent(System.out::println);
 
@@ -23,9 +24,7 @@ public class ExemploOptional {
 
         optionalString.map((valor) -> valor.concat("****")).ifPresent(System.out::println);
 
-        optionalString.orElseThrow(IllegalStateException::new);
-
-
+        System.out.println(optionalString.orElseThrow(IllegalStateException::new));
 
     }
 
