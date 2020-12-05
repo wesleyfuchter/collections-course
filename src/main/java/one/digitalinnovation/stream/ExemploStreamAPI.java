@@ -31,12 +31,19 @@ public class ExemploStreamAPI {
         System.out.println("Menor numero de letras: " + estudantes.stream().min(Comparator.comparingInt(String::length)));
 
         // Retorna os elementos que tem a letra R no nome
-        System.out.println("Com a letra r no nome: " + estudantes.stream().filter((estudante) ->
-                estudante.toLowerCase().contains("r")).collect(Collectors.toList()));
+        System.out.println("Com a letra r no nome: " + estudantes.stream()
+                           .filter((estudante) -> estudante.toLowerCase().contains("r"))
+                           .collect(Collectors.toList())
+                          );
 
         // Retorna uma nova coleção, com os nomes concatenados a quantidade de letra de cada nome
-        System.out.println("Retorna uma nova coleção com a quantidade de letras: " + estudantes.stream().map(estudante ->
-                estudante.concat(" - ").concat(String.valueOf(estudante.length()))).collect(Collectors.toList()));
+        System.out.println("Retorna uma nova coleção com a quantidade de letras: " + estudantes.stream()
+                           .map(estudante -> estudante
+                                .concat(" - ")
+                                .concat(String.valueOf(estudante.length()))
+                               )
+                           .collect(Collectors.toList())
+                          );
 
         // Retorna somente os 3 primeiros elementos da coleção
         System.out.println("Retorna os 3 primeiros elementos: " + estudantes.stream().limit(3).collect(Collectors.toList()));
@@ -64,16 +71,18 @@ public class ExemploStreamAPI {
         // Exemplo de operação encadeada
         System.out.print("Operaçõa encadeada: ");
         System.out.println(estudantes.stream()
-                .peek(System.out::println)
-                .map(estudante ->
-                        estudante.concat(" - ").concat(String.valueOf(estudante.length())))
-                .peek(System.out::println)
-                .filter((estudante) ->
-                        estudante.toLowerCase().contains("r"))
-                .collect(Collectors.toList()));
-//                .collect(Collectors.joining(", ")));
-//                .collect(Collectors.toSet()));
-//                .collect(Collectors.groupingBy(estudante -> estudante.substring(estudante.indexOf("-") + 1))));
+                           .peek(System.out::println)
+                           .map(estudante -> 
+                                estudante.concat(" - ").concat(String.valueOf(estudante.length()))
+                               )
+                           .peek(System.out::println)
+                           .filter((estudante) ->
+                                estudante.toLowerCase().contains("r"))
+                           .collect(Collectors.toList()));
+//                         .collect(Collectors.joining(", ")));
+//                         .collect(Collectors.toSet()));
+//                         .collect(Collectors.groupingBy(estudante -> estudante.substring(estudante.indexOf("-") + 1)))
+                             );
 
     }
 
